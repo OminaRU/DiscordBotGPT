@@ -5,11 +5,11 @@ import os
 
 load_dotenv()
 
-openai.api_key = os.getenv('CHATGPT_API_KEY')
-
+#openai.api_key = os.getenv('CHATGPT_API_KEY')
+openai.api_key = "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"
 def chatgpt_response(prompt):
     response = openai.Completion.create(
-       model = "text-davinci:003",
+       engine = "text-davinci:003",
        prompt = prompt,
        temperature = 1,
        max_tokens = 100
